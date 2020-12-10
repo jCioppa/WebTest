@@ -1,0 +1,899 @@
+@import url('https://rsms.me/inter/inter.css');
+
+* { font-family: 'Inter', sans-serif; }
+
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+body
+{
+    background: #F2E7FE;
+}
+
+#startWrapper
+{
+  position: absolute;
+  width: 540px;
+  height: 589px;
+  left: calc(50% - 540px/2);
+  top: calc(50% - 589px/2 - 0.5px);
+  background: #FFFFFF;
+  box-shadow: -2px 2px 0px 5px #000000;
+  border-radius: 16px;
+}
+
+#startWrapper #header
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  width: 540px;
+  height: 68px;
+  left: 0px;
+  top: 0px;
+  background: #7F39FB;
+  border-radius: 16px 16px 0px 0px;
+}
+
+#startWrapper #header span
+{
+  position: static;
+  width: 129px;
+  height: 36px;
+  left: 22px;
+  top: calc(50% - 36px/2);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 30px;
+}
+
+#startWrapper button
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  position: absolute;
+  height: 40px;
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
+  background: #7F39FB;
+  border: 2px solid #000000;
+  box-shadow: -2px 2px 0px #000000;
+  border-radius: 4px;
+  height: 40px;
+  width: 476px;
+  left: 32px;
+  top: 517px;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+#startWrapper button span
+{
+  position: static;
+  width: 162px;
+  height: 21px;
+  left: 157px;
+  top: 9.5px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 150%;  
+  text-transform: uppercase;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+
+#frame40
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  position: absolute;
+  width: 165px;
+  height: 59px;
+  left: 32px;
+  top: 426px;
+}
+
+#frame40 #title
+{
+  position: static;
+  width: 126px;
+  height: 29px;
+  left: 0px;
+  top: 0px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 8px;
+}
+
+#frame40 #content
+{
+  position: static;
+  width: 165px;
+  height: 22px;
+  left: 0px;
+  top: 37px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 8px;
+}
+
+#amount
+{
+  position: absolute;
+  width: 100px;
+  height: 29px;
+  left: 408px;
+  top: 426px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: right;
+  color: #000000;
+}
+
+#startWrapper #box
+{
+  position: absolute;
+  width: 294px;
+  height: 294px;
+  left: 123px;
+  top: 100px;
+  background: #F2E7FE;
+  border-radius: 8px;
+}
+
+#startWrapper #chairPlaceholder
+{
+  position: absolute;
+  width: 150px;
+  height: 163px;
+  left: 195px;
+  top: 166px;
+}
+
+#startWrapper #chairPlaceholder img
+{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+
+/* second frame */
+#orderWrapper
+{
+  position: absolute;
+  width: 800px;
+  height: 604px;
+  left: calc(50% - 800px/2);
+  top: calc(50% - 604px/2 - 1px);
+  background: #FFFFFF;
+  box-shadow: -2px 2px 0px 5px #000000;
+  border-radius: 16px;
+}
+
+#orderWrapper .header
+{
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  align-items: center;
+  width: 800px;
+  height: 68px;
+  left: 0px;
+  top: 0px;
+  background: #7F39FB;
+  border-radius: 16px 16px 0px 0px;
+}
+
+#orderWrapper .header span
+{
+  position: static;
+  width: 279px;
+  height: 36px;
+  left: 154px;
+  top: calc(50% - 36px/2);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #FFFFFF;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 30px;
+
+}
+
+#orderWrapper .header .dollarSign
+{
+  position: static;
+  width: 24px;
+  height: 24px;
+  left: 22px;
+  top: 22px;  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+
+#orderWrapper .header .dollarSign img
+{
+  position: absolute;
+  left: 20px;
+ }
+
+ #orderWrapper #backButton
+{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px 8px 8px;
+  width: 92px;
+  height: 40px;
+  left: 32px;
+  bottom: 32px;
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  box-shadow: -2px 2px 0px #000000;
+  border-radius: 4px;
+}
+
+#orderWrapper #backButton:hover{
+  background: #F2E7FE;
+}
+
+#orderWrapper #backButton:active{
+  background: #DBB2FF;
+  box-shadow: 2px -2px 0px #000000;
+}
+
+#orderWrapper #backButton span
+{
+  position: static;
+  width: 40px;
+  height: 21px;
+  left: 46px;
+  top: 9.5px;
+  padding-left: 5px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 150%;  
+  color: #000000;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+
+
+#backButton #arrowLeft
+{
+  position: static;
+  width: 20px;
+  height: 20px;
+  left: 9px;
+  top: 10px;  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+
+#backButton #arrowLeft img#arrow
+{
+  position: absolute;
+  left: 5px;
+}
+
+#backButton #arrowLeft img#line
+{
+  position: absolute;
+  left: 20.83%;
+  right: 20.83%;
+  top: 50%;
+  bottom: 50%; 
+  border: 2px solid #000000;
+}
+
+#orderWrapper #submitButton
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  position: absolute;
+  width: 400px;
+  height: 40px;
+  right: 32px;
+  bottom: 32px; 
+  background: #7F39FB;  
+  border: 2px solid #000000;
+  box-shadow: -2px 2px 0px 0px #000000;
+  border-radius: 4px;
+}
+
+#orderWrapper #submitButton:hover, #startWrapper button:hover {
+  background: #6200EE;
+}
+
+#orderWrapper #submitButton:active , #startWrapper button:active{
+  background: #5600E8;
+  box-shadow: 2px -2px 0px #000000;
+}
+
+#orderWrapper #submitButton span
+{
+  position: static;
+  width: 55px;
+  height: 21px;
+  left: 172.5px;
+  top: 9.5px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 150%;  
+  text-transform: uppercase;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+
+span#ccv
+{
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  left: 639px;
+  top: calc(50% - 20px/2 + 102px);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+span#expiry
+{
+  position: absolute;
+  width: 77px;
+  height: 20px;
+  left: 0px;
+  top: 0px; 
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;  
+  color: #000000;
+}
+
+span#cardholderName
+{
+  position: absolute;
+  width: 117px;
+  height: 20px;
+  left: 0px;
+  top: 0px; 
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;  
+  color: #000000;
+}
+
+#cardholderNameSection
+{
+  position: absolute;
+  width: 400px;
+  height: 94px;
+  left: 368px;
+  top: 280px;
+}
+
+#cardholderNameSection img#userIcon
+{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 7px;
+  top: 37px;
+}
+
+#cardNumberSection
+{
+  position: absolute;
+  width: 400px;
+  height: 94px;
+  left: 368px;
+  top: 154px;
+}
+
+#cardNumberSection img#icon
+{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 8px;
+  top: 38px;
+}
+
+span#cardNumber
+{
+  position: absolute;
+  width: 89px;
+  height: 20px;
+  left: 0px;
+  top: 0px; 
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+
+#orderInfo #amountDue
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  position: absolute;
+  width: 138px;
+  height: 76px;
+  left: 115px;
+  top: 168px;
+}
+
+#orderInfo #amountDue #title
+{
+  position: static;
+  width: 107px;
+  height: 27px;
+  left: 15.5px;
+  top: calc(50% - 27px/2 - 24.5px);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(0, 0, 0, 0.87);  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 8px;
+}
+
+#orderInfo #amountDue #amount
+{
+  position: static;
+  width: 138px;
+  height: 41px;
+  left: 0px;
+  top: calc(50% - 41px/2 + 17.5px);
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 41px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 8px;
+}
+
+#orderInfo #orderNumber
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px; 
+  position: absolute;
+  width: 139px;
+  height: 76px;
+  left: 114px;
+  top: 304px;
+}
+
+#orderInfo #orderNumber #title
+{
+  position: static;
+  width: 123px;
+  height: 27px;
+  left: 8px;
+  top: calc(50% - 27px/2 - 24.5px);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(0, 0, 0, 0.87);  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 8px;
+}
+
+#orderInfo #orderNumber #amount
+{
+  position: static;
+  width: 139px;
+  height: 41px;
+  left: 0px;
+  top: calc(50% - 41px/2 + 17.5px);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 41px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 8px;
+}
+
+#cardImages
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  position: absolute;
+  width: 400px;
+  height: 40px;
+  left: 368px;
+  top: 92px; 
+}
+
+#cardImages #mastercard
+{
+  position: static;
+  width: 70px;
+  height: 40px;
+  left: 330px;
+  top: 0px;  
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 4px;  
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+  margin: 24px 0px;
+}
+
+#cardImages #visa
+{
+  position: static;
+  width: 70px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 24px 0px;
+}
+
+#cardImages #amex
+{
+  position: static;
+  width: 70px;
+  height: 40px;
+  left: 220px;
+  top: 0px; 
+  background: #FFFFFF;
+  border-radius: 4px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  margin: 24px 0px;
+}
+
+#cardImages #discover
+{
+  position: static;
+  width: 70px;
+  height: 40px;
+  left: 110px;
+  top: 0px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 24px 0px;
+}
+
+input#ccvInput
+{
+  position: absolute;
+  width: 129px;
+  height: 40px;
+  left: 0px;
+  top: 28px;  
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 10px;
+}
+
+#cvvSection
+{
+  position: absolute;
+  width: 129px;
+  height: 94px;
+  left: 639px;
+  top: 406px;
+}
+
+#expirySection
+{
+  position: absolute;
+  width: 173px;
+  height: 94px;
+  left: 368px;
+  top: 406px;
+}
+
+select#expiryMonth
+{
+  position: absolute;
+  width: 115px;
+  height: 40px;
+  left: 0px;
+  top: 28px;  
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+select#expiryYear
+{
+  position: absolute;
+  width: 115px;
+  height: 40px;
+  left: 130px;
+  top: 28px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+input#cardNumberInput
+{
+  position: absolute;
+  width: 400px;
+  height: 40px;
+  left: 0px;
+  top: 28px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 35px;
+}
+
+input#cardHolderNameInput
+{
+  position: absolute;
+  width: 400px;
+  height: 40px;
+  left: 0px;
+  top: 28px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 30px;
+}
+
+.warning
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  position: absolute;
+  width: 184px;
+  height: 18px;
+  left: 0px;
+  top: 76px;
+}
+
+.warning .warningImage
+{
+  position: static;
+  width: 16px;
+  height: 16px;
+  left: 0px;
+  top: 1px;  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 4px 0px;
+}
+
+.warning span
+{
+  position: static;
+  width: 194px;
+  height: 18px;
+  left: 20px;
+  top: calc(50% - 18px/2);
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #D90027;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 4px 0px;
+  padding-left: 5px;
+}
+
+/* don't show the warning section for a valid div */
+.valid .warning
+{
+  -moz-transition: opacity 0.05s linear;
+  -o-transition: opacity 0.05s linear;
+  -webkit-transition: opacity 0.05s linear;
+  transition: opacity 0.05s linear;
+  opacity: 0;
+}
+
+.invalid .warning{
+  -moz-transition: opacity 0.05s linear;
+  -o-transition: opacity 0.05s linear;
+  -webkit-transition: opacity 0.05s linear;
+  transition: opacity 0.05s linear;
+  opacity: 1;
+}
+
+.invalid input 
+{
+  border : 2px solid #D90027;
+}
+
+.invalid select 
+{
+  border : 2px solid #D90027;
+}
+
+#completeWrapper #completeCard
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 294px;
+    height: 127px;
+    left: 100px;
+    top: 100px;
+}
+
+#completeWrapper img#logo 
+{
+    position: absolute;
+    left: 43.2%;
+    right: 43.2%;
+    top: 0%;
+    bottom: 68.5%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 12px;
+}
+
+#completeWrapper span#title
+{
+    position: absolute;
+    width: 129px;
+    height: 36px;
+    left: 82.5px;
+    top: calc(50% - 36px/2 + 6.5px);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 12px;
+}
+
+#completeWrapper span#message
+{
+    position: absolute;
+    width: 294px;
+    height: 27px;
+    left: 0px;
+    top: calc(50% - 27px/2 + 50px);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.87);
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 12px;
+}
+
+#completeWrapper 
+{
+    position: absolute;
+    width: 540px;
+    height: 340px;
+    left: calc(50% - 540px/2);
+    top: calc(50% - 340px/2);
+    background: #FFFFFF;
+    box-shadow: -2px 2px 0px 5px #000000;
+    border-radius: 16px;
+}

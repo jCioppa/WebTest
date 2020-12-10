@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='/javascripts/main.js'></script>
+  </head>
+<body >
+
+    <div id = "orderWrapper"> 
+        <div class = "header">  
+            <div class = "dollarSign">
+                <img id = "S" src = "images/dollarSign.png">
+            </div>
+            <span>Complete your payment</span>
+        </div>
+
+        <div id = "cardImages">
+            <div id = "visa"><img src = "images/visaDisabled.png"></div>
+            <div id = "discover"><img src = "images/discoverDisabled.png"></div>
+            <div id = "amex"><img src = "images/amexDisabled.png"></div>
+            <div id = "mastercard"><img src = "images/mastercardDisabled.png"></div>
+        </div>
+
+        <div id= "expirySection" class = "valid">
+            <span id = "expiry">Expiry Date</span> 
+            <select id = "expiryMonth" required >
+                <option value="" disabled selected hidden>MM</option>>
+                <option value = "01">01 - January</option>
+                <option value = "02">02 - February</option>
+                <option value = "03">03 - March</option>
+                <option value = "04">04 - April</option>
+                <option value = "05">05 - May</option>
+                <option value = "06">06 - June</option>
+                <option value = "07">07 - July</option>
+                <option value = "08">08 - August</option>
+                <option value = "09">09 - September</option>
+                <option value = "10">10 - October</option>
+                <option value = "11">11 - November</option>
+                <option value = "12">12 - December</option>
+              </select>
+    
+            <select id = "expiryYear" required>
+                <option value="" disabled selected hidden>YYYY</option>
+            </select>
+    
+            <div class = "warning">
+                <div class = "warningImage">
+                    <img src="images/alertIcon.png">                   
+                </div>
+                <span>Expiry date is required.</span>
+            </div>
+
+        </div>
+
+        <div id = "cvvSection" class = "valid">  
+            <span id = "ccv">CVV</span> 
+            <input id = "ccvInput">CVV</input> 
+            <div class = "warning">
+                <div class = "warningImage">
+                    <img src="images/alertIcon.png">                   
+                </div>
+                <span>CVV is required.</span>
+            </div>
+        </div>
+
+        <div id = "cardholderNameSection" class = "valid">
+            <span id = "cardholderName">Cardholder Name</span> 
+            <input id = "cardHolderNameInput" class = "valid" placeholder="Name on the card"></input>
+            <img id = "userIcon" src = "/images/userIcon.png">
+            <div class = "warning">
+                <div class = "warningImage">
+                    <img src="images/alertIcon.png">                   
+                </div>
+                <span>Cardholder name is required.</span>
+            </div>
+        </div>
+
+        <div id = "cardNumberSection" class = "valid">
+            <span id = "cardNumber">Card Number</span> 
+            <input id = "cardNumberInput" placeholder="#### #### #### ####"></input>
+            <img id = "icon" src="/images/creditCardIcon.png">
+            <div class = "warning">
+                <div class = "warningImage">
+                    <img src="images/alertIcon.png">                   
+                </div>
+                <span>Card number is required.</span>
+            </div>
+        </div>
+       
+        <div id = "orderInfo">     
+            <div id = "amountDue">
+                <span id = "title">Amount Due</span>
+                <span id = "amount">$249.00</span>
+            </div>
+            <div id = "orderNumber">
+                <span id = "title">Order Number</span>
+                <span id = "amount">1234567</span>
+            </div> 
+        </div>
+
+        <button id = "backButton" onclick="OnBackClicked()">
+            <span>BACK</span> 
+            <div id = "arrowLeft">
+                <img id = "arrow" src = "images/leftArrow.png">
+            </div>
+        </button>
+
+        <button id = "submitButton" onclick="TrySubmit()">
+            <span>SUBMIT</span> 
+        </button>
+    </div>
+
+    <script src='/javascripts/orderForm.js'></script>
+</body>
+</html>
