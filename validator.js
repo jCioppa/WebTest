@@ -41,6 +41,7 @@ module.exports.Validate = (validationData) =>
      let cardNumber = validationData.cardNumber;
      let isValid = false;
      let type = "";
+     let code = 400;
 
      if (validateLuhn(cardNumber))
      {          
@@ -51,12 +52,13 @@ module.exports.Validate = (validationData) =>
                     let matcher = cardPatterns[cardType];                   
                     if (matcher.test(cardNumber)) 
                     {
+                         code = 200;
                          isValid = true;       
                     }
                }
           }          
      }
 
-     let results = { status : isValid };
+     let results = { status : isValid, code : code };
      return results;
 };

@@ -67,6 +67,13 @@ function PreValidate(submissionData)
     return valid; 
 }
 
+// handle the Luhn check failing
+function OnValidationFailed() 
+{ 
+    MarkInvalid("#cardNumberSection");
+    $("#cardNumberSection .warning span").html("Card number is invalid");
+}
+
 // the callback for the async card validation request
 function OnComplete(result) 
 {
@@ -79,8 +86,7 @@ function OnComplete(result)
     }        
     else
     {
-        MarkInvalid("#cardNumberSection");
-        $("#cardNumberSection .warning span").html("Card number is invalid");
+        OnValidationFailed();
     }
 }
 
@@ -146,9 +152,9 @@ function ParseCardType(cardNumber)
     let cardPatterns = 
     {
         visa: /^4/,
-        mastercard: /^5|^2/,
-        amex: /^3[47]/,
-        discover: /^65/
+        mastercard: /^5/,
+        amex: /^3/,
+        discover: /^6/
     };
 
     for (let key in cardPatterns)
@@ -238,7 +244,11 @@ function TrySubmit()
     // validate with the backend to see if the card is a proper type
     if (PreValidate(submissionData))
     {
-        $.post("/api/validate", submissionData).done(OnComplete);
+        $.post("/api/validate", submissionData).fail(
+            function(jqXHR, textStatus, errorThrown) 
+            {
+                 OnValidationFailed();
+            }).done(OnComplete);
     }
 }
 

@@ -6,6 +6,6 @@ module.exports =
     {
         let validationData = req.body;    
         let results = cardValidator.Validate(validationData);
-        res.json(results); 
+        res.status(results.code).json(results); 
     }
 };
