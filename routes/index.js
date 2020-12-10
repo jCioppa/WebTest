@@ -17,9 +17,4 @@ router.get('/complete', function(req, res, next)
    controller.Complete(req, res, next);
 });
 
-router.get('/dropdown', function(req, res, next)
-{
-   res.render('dropdown');
-});
-
 module.exports = router;
