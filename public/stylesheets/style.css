@@ -801,7 +801,34 @@ input#cardHolderNameInput
   opacity: 0;
 }
 
-.invalid .warning{
+select, input
+{
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+select:focus, select:active, input:focus, input:active
+{
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  box-shadow: -2px 2px 0px #000000;
+  border-radius: 4px;
+}
+
+select.invalid:focus, select.invalid:active, .invalid input.invalid:focus, .invalid input.invalid:active
+{
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  box-shadow: none important!;
+  border-radius: 4px;
+}
+
+.invalid .warning 
+{
   -moz-transition: opacity 0.05s linear;
   -o-transition: opacity 0.05s linear;
   -webkit-transition: opacity 0.05s linear;
@@ -809,14 +836,16 @@ input#cardHolderNameInput
   opacity: 1;
 }
 
-.invalid input 
+.invalid input
 {
   border : 2px solid #D90027;
+  box-shadow: none !important;
 }
 
 .invalid select.invalid 
 {
   border : 2px solid #D90027;
+  box-shadow: none !important;
 }
 
 #completeWrapper #completeCard
@@ -897,3 +926,4 @@ input#cardHolderNameInput
     box-shadow: -2px 2px 0px 5px #000000;
     border-radius: 16px;
 }
+

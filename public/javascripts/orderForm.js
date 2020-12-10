@@ -204,6 +204,26 @@ $("input#ccvInput").on("input", function()
     MarkValid("#cvvSection");
 });
 
+// changes an image to disabled based on the card type
+function SetImageDisabled(card)
+{
+    if (card.length > 0)
+    {
+        let id = "div#cardImages #" + card + " img";
+        $(id).attr('src', '/images/' + card + 'Disabled.png');
+    }
+}
+
+// changes an image to active based on the card type
+function SetImageActive(card)
+{
+    if (card.length > 0)
+    {
+        let id = "div#cardImages #" + card + " img";
+        $(id).attr('src', '/images/' + card + 'Active.png');
+    }
+}
+
 $("input#cardNumberInput").on("input", function() 
 {
     // this will clear any visible errors as soon as you continue editing the input field
@@ -220,28 +240,20 @@ $("input#cardNumberInput").on("input", function()
         {
             if (!StringEquals(cardType, lastCardType))
             {
+                SetImageDisabled(lastCardType);    
                 lastCardType = String(cardType);
-                let id = "div#cardImages #" + cardType + " img";
-                $(id).attr('src', '/images/' + cardType + 'Active.png');
+                SetImageActive(cardType);
             }
         }
         else
         {
-            if (lastCardType.length > 0)
-            {
-                let id = "div#cardImages #" + lastCardType + " img";
-                $(id).attr('src', '/images/' + lastCardType + 'Disabled.png');
-            }
+            SetImageDisabled(lastCardType); 
             lastCardType = String("");
         }
     }
     else
     {
-        if (lastCardType.length > 0)
-        {
-            let id = "div#cardImages #" + lastCardType + " img";
-            $(id).attr('src', '/images/' + lastCardType + 'Disabled.png');
-        }
+        SetImageDisabled(lastCardType); 
         lastCardType = String("");
     }
 });

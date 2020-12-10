@@ -10,29 +10,27 @@ const cardPatterns =
 // Luhn algorithm: given a string of digits:
 //        sum up all digits, replacing every even digit p with (2 * p) % 10
 //        if the result is a multiple of 10, the string is valid
-//        inspired by : https://en.wikipedia.org/wiki/Luhn_algorithm
-const validateLuhn = (cardNumber) => 
+//        inspired by : https://en.wikipedia.org/wiki/Luhn_algorithm and https://gist.github.com/DiegoSalazar/4075533
+const validateLuhn = (card) => 
 {
-     let sum = parseInt(cardNumber.charAt(cardNumber.length - 1));
- 
-     for (let i = 0; i < cardNumber.length - 1; i++) 
-     {
-         let digit = parseInt(cardNumber.charAt(i));
- 
-         if (i % 2 === 0) 
-         {
-               digit *= 2;
+     let sum = 0;
+     let even = false;
+	card = card.replace(/\D/g, "");
 
-               if (digit > 9)
-               {
-                    digit -= 9;
-               }
-          } 
-         
-         sum += digit;
-     }
- 
-     return sum % 10 === 0;
+     for (let n = card.length - 1; n >= 0; n--) 
+     {     
+          let digit = parseInt(card.charAt(n), 10);
+
+          if (even && (digit *= 2) > 9) 
+          {
+               digit -= 9;
+          }
+
+		sum += digit;
+		even = !even;
+	}
+
+	return (sum % 10) == 0;
  }
 
  
@@ -40,25 +38,27 @@ module.exports.Validate = (validationData) =>
 {
      let cardNumber = validationData.cardNumber;
      let isValid = false;
-     let type = "";
      let code = 400;
-
-     if (validateLuhn(cardNumber))
-     {          
-          for (let cardType in cardPatterns)
+            
+     for (let cardType in cardPatterns)
+     {
+          if (!isValid)
           {
-               if (!isValid)
+               let matcher = cardPatterns[cardType];                   
+               if (matcher.test(cardNumber)) 
                {
-                    let matcher = cardPatterns[cardType];                   
-                    if (matcher.test(cardNumber)) 
+                    card = cardType;
+                    if (validateLuhn(cardNumber))
                     {
                          code = 200;
-                         isValid = true;       
+                         isValid = true;                            
                     }
                }
-          }          
-     }
+          }
+     }          
+
 
      let results = { status : isValid, code : code };
+
      return results;
 };
