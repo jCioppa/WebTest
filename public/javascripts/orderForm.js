@@ -61,7 +61,23 @@ function PreValidate(submissionData)
     if (StringEquals(submissionData.expMonth, "MM") || StringEquals(submissionData.expYear, "YYYY"))
     {
         MarkInvalid("#expirySection");
+
+        if (StringEquals(submissionData.expMonth, "MM"))
+        {
+            MarkInvalid("#expirySection #expiryMonth")
+        }
+
+        if (StringEquals(submissionData.expYear, "YYYY"))
+        {
+            MarkInvalid("#expirySection #expiryYear")
+        }
+
         valid = false;  
+    }
+    else
+    {
+        let month = submissionData.expMonth;
+        let year = submissionData.expYear;
     }    
 
     return valid; 
@@ -169,6 +185,13 @@ function ParseCardType(cardNumber)
 
 let lastCardType = "";
 
+// clear date errors when you set the date value
+$("#expirySection select").on('change', function(e){
+    MarkValid("#expirySection");
+    MarkValid("#expirySection #expiryMonth")
+    MarkValid("#expirySection #expiryYear")
+});
+
 // this will clear any visible errors as soon as you continue editing the input field
 $("input#cardHolderNameInput").on("input", function() 
 {
@@ -229,8 +252,8 @@ function TrySubmit()
     let cardNumber =  tw($("#cardNumberInput").val());
     let cardHolderName = String(tw($("#cardHolderNameInput").val()));
     let cvv = tw($("#ccvInput").val());
-    let expYear = $("#expiryYear :selected").text();
-    let expMonth = $("#expiryMonth :selected").text();  
+    let expYear = $("#expiryYear :selected").val();
+    let expMonth = $("#expiryMonth :selected").val();  
 
     let submissionData = 
     {

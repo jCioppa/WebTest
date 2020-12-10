@@ -814,7 +814,7 @@ input#cardHolderNameInput
   border : 2px solid #D90027;
 }
 
-.invalid select 
+.invalid select.invalid 
 {
   border : 2px solid #D90027;
 }
